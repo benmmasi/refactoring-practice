@@ -3,6 +3,7 @@ require "./computer"
 
 class Game
   HANDS = ["Rock", "Paper", "Scissors"]
+  NUMBER_OF_ROUNDS = 3
   
   def initialize
     @hand = HANDS.sample
@@ -10,9 +11,11 @@ class Game
   end
 
   def play_round
+    NUMBER_OF_ROUNDS.times do
     @player = Player.new
     @player.play
     @computer.play
+    end
   end
 end
 
