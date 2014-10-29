@@ -15,6 +15,7 @@ class Game
     @player = Player.new
     @player.play
     @computer.play
+    @player.win_or_lose
     end
   end
 end
